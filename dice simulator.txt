@@ -1,0 +1,20 @@
+# dice program
+import random
+def roll_dice():
+    c=[]
+    got_valid=False
+    while True:
+         p=random.randint(1,6)
+         c.append(p)
+         if p in (1,6):
+             print(f"you got {p}.Try again")
+             got_valid=True
+         else:
+             print(f"you got {p}")
+             break
+    print("all numbers occured:",c)
+    if got_valid:
+         print("you got 1 or 6,so sum of all numbers:-",sum(c))
+    else:
+         print("you got no 1 and 6 so exiting the game and no sum will be calculated")
+roll_dice()
